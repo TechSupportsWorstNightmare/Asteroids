@@ -24,16 +24,16 @@ void move(){
   
 }
 void warp(){
-  if (x<= 0){
-   x= width; 
+  if (loc.x<= 0){
+   loc.x= width; 
   }
-  if(x >= width){
-   x= 0; 
+  if(loc.x >= width){
+   loc.x= 0; 
   }
-  if(y>= height){
-   y = 0; 
+  if(loc.y>= height){
+   loc.y = 0; 
   }
-  if( y<= 0){
+  if( loc.y<= 0){
     
     y= height;
   }

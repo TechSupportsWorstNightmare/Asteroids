@@ -16,7 +16,7 @@ y=50;
 }
 
 void draw(){ 
- if(keyPressed== true){
+ if(keyCode == ENTER){
    background(0);}
    else {
   image(ast,0,0);

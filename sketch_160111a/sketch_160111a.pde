@@ -15,10 +15,18 @@ y=50;
   
 }
 
-void draw(){
-  background(ast);
+void draw(){ 
+ if(keyPressed== true){
+   background(0);}
+   else {
+  image(ast,0,0);
+   }
+   if(keyCode == ESC){
+    // image(help,0,0);
+   }
+   
   if(keyCode == UP){
-  y= y++;
+  y= y--;
   }
   triangle(x,y -20, x-10, y, x+10, y);
   

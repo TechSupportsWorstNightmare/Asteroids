@@ -10,7 +10,7 @@ ast= loadImage("asteroids.jpg");
 
 s = new Ship();
 a = new Asteroid();
-
+int i =0;
 
 }
 

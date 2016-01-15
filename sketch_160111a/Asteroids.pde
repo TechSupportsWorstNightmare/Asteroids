@@ -3,8 +3,11 @@ class Asteroid {
   int diam;             
 
   Asteroid() {  
+     
    loc = new PVector(x,y);
    vel = PVector.random2D();
+   println(loc.y);
+  
 }
 void display(){
   fill(0);
@@ -24,19 +27,15 @@ void move(){
   
 }
 void warp(){
-  if (loc.x<= 0){
-   loc.x= width; 
+ if (loc.x>= width) {
+    loc.x = 0;     
+  } else if (loc.x <= 0) {
+    loc.x = width ;
   }
-  if(loc.x >= width){
-   loc.x= 0; 
-  }
-  if(loc.y>= height){
-   loc.y = 0; 
-  }
-  if( loc.y<= 0){
-    
-    loc.y= height;
+  if (loc.y  >= height) {
+    loc.y = 0;
+  } else if (loc.y  <= 0) {
+    loc.y = height;
   }
 }
-
 }

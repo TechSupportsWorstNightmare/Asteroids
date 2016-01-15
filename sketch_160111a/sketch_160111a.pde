@@ -21,8 +21,10 @@ i++;
 
 void draw(){ 
  int i =0;
-  background(0);
-  while(i<count){
+  background(ast);
+   if(keyCode == ENTER){
+ background(0);
+   while(i<count){
   a[i].display();
   a[i].move();
   a[i].warp();
@@ -30,6 +32,18 @@ void draw(){
   }
   s.display();
   s.move();
+ }
+ else {
+ image(ast,0,0);
+ }
+  //while(i<count){
+  //a[i].display();
+  //a[i].move();
+  //a[i].warp();
+  //i++;
+  //}
+  //s.display();
+  //s.move();
  //if(keyCode == ENTER){
  //background(0);}
  //else {

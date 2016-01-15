@@ -1,24 +1,33 @@
 int count = 10;
 
-Asteroid a;
+Asteroid[] a= new Asteroid[count];
 Ship s;
 float x,y, tx,ty;
 PImage ast;
+
 void setup(){
+  int i =0;
  size(1024,768);
 ast= loadImage("asteroids.jpg");
 
 s = new Ship();
-a = new Asteroid();
-int i =0;
+while(i<count){
+a[i] = new Asteroid();
+i++;
+}
+
 
 }
 
 void draw(){ 
+ int i =0;
   background(0);
-  a.display();
-  a.move();
-  a.warp();
+  while(i<count){
+  a[i].display();
+  a[i].move();
+  a[i].warp();
+  i++;
+  }
   s.display();
   s.move();
  //if(keyCode == ENTER){

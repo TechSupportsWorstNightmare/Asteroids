@@ -1,19 +1,17 @@
-Asteroid a;
-float x,y;
+int count = 10;
 
+Asteroid a;
+Ship s;
+float x,y, tx,ty;
 PImage ast;
 void setup(){
  size(1024,768);
 ast= loadImage("asteroids.jpg");
 
-x=50;
-y=50;
+s = new Ship();
 a = new Asteroid();
+int i =0;
 
-  
-  
-  
-  
 }
 
 void draw(){ 
@@ -21,6 +19,8 @@ void draw(){
   a.display();
   a.move();
   a.warp();
+  s.display();
+  s.move();
  //if(keyCode == ENTER){
  //background(0);}
  //else {
@@ -29,11 +29,7 @@ void draw(){
  //if(keyCode == ESC){
  // // image(help,0,0);
  //}
-   
- //if(keyCode == UP){
- //y= y--;
- //}
- //triangle(x,y -20, x-10, y, x+10, y);
+
   
   
   

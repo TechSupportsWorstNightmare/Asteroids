@@ -1,14 +1,14 @@
-Asteroid a;
-float x,y;
+Asteroid a;   //declares a as the class of asteroids
+float x,y;    //declare x and y variabkes, for use of placement
 
-PImage ast;
+PImage ast;   //load asteroids background for the start menu  
 void setup(){
  size(1024,768);
-ast= loadImage("asteroids.jpg");
+ast= loadImage("asteroids.jpg"); //load the background
 
-x=50;
+x=50;                   //set coordinates
 y=50;
-a = new Asteroid();
+a = new Asteroid();     //begin creating asteroids
 
   
   
@@ -17,8 +17,8 @@ a = new Asteroid();
 }
 
 void draw(){ 
-  background(0);
-  a.display();
+  background(0);   //set the black background//
+  a.display();     //set the comamands for the object
   a.move();
   a.warp();
  //if(keyCode == ENTER){
@@ -31,7 +31,7 @@ void draw(){
  //}
    
  //if(keyCode == UP){
- //y= y--;
+ //y= y--; 
  //}
  //triangle(x,y -20, x-10, y, x+10, y);
   

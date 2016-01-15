@@ -35,7 +35,7 @@ void warp(){
   }
   if( loc.y<= 0){
     
-    y= height;
+    loc.y= height;
   }
 }
 

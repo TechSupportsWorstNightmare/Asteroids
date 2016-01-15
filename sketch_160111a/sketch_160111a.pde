@@ -1,3 +1,5 @@
+int count = 10;
+
 Asteroid a;
 Ship s;
 float x,y, tx,ty;

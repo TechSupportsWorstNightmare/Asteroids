@@ -1,22 +1,23 @@
 int count = 10;
 
-Asteroid a;
-Ship s;
-float x,y, tx,ty;
+Asteroid a;        //sets the asteroids class
+Ship s;            //the ship's variable
+float x,y, tx,ty;  //position varibales of the ship and asteroifs
 PImage ast;
+
 void setup(){
  size(1024,768);
-ast= loadImage("asteroids.jpg");
+ast= loadImage("asteroids.jpg");  //loads the Asteroids start screen
 
-s = new Ship();
-a = new Asteroid();
-int i =0;
+s = new Ship();       //sets variable s in place of ship
+a = new Asteroid();   //sets variable a in place of asteroids
+int i =0;              
 
 }
 
 void draw(){ 
   background(0);
-  a.display();
+  a.display();       //commands for the ships
   a.move();
   a.warp();
   s.display();

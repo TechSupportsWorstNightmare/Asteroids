@@ -45,7 +45,7 @@ void draw() {
       i++;
     }
     s.display();
-    s.move();
+    s.spin();
   }
   //while(i<count){
   //a[i].display();

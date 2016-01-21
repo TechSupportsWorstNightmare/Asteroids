@@ -48,16 +48,16 @@ void draw() {
         gameMode=3;
       }
     }
-  } else if (gameMode==3) {
+  }else if (gameMode==3) {
     background(0, 0, 0, 100);
     fill(255);
     textAlign(CENTER);
     textSize(32);
     text("PAUSE\nMove the mouse to control the ship.\nClick the mouse to shoot\nUse left and right arrow keys to rotate the ship.\nPress the ALT key to resume the game.", width/2, 60);
-   if(keyPressed && keyCode == ALT){
-    gameMode=2;
-  }
+    if (keyPressed && keyCode == ALT) {
+      gameMode=2;
     }
+  }
   s.display();
   s.move();
 }

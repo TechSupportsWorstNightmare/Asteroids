@@ -6,19 +6,13 @@ class Ship {
   Ship() { 
 
 
-    tloc = new PVector(tx, ty);
+    tloc = new PVector(mouseX, mouseY);
     vel = PVector.random2D();
   }
   void display() {
-    triangle(tloc.x, tloc.y -20, tloc.x-10, tloc.y, tloc.x+10, tloc.y);
+    triangle(mouseX, mouseY -10,mouseX -10, mouseY+10, mouseX +10, mouseY+10);
   }
   void move() {
-    if (key == CODED) {
-      if (keyCode == UP) {
-        tloc.y= tloc.y-15;
-      } else if (keyCode == DOWN) {
-        tloc.y=tloc.y+15;
-      }
-    }
+    
   }
 }

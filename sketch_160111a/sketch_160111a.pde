@@ -1,3 +1,10 @@
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.effects.*;
+import ddf.minim.signals.*;
+import ddf.minim.spi.*;
+import ddf.minim.ugens.*;
+
 int count = 10;
 int gameMode = 0;
 Asteroid[] a= new Asteroid[count];
@@ -24,7 +31,7 @@ void draw() {
     if (keyPressed && key == ENTER) {
       println("switched game mode in frame " + frameCount);
       background(0);
-      gameMode = 1;
+      gameMode =1;
     }
   } else if (gameMode == 1) {
     background(0);
@@ -48,16 +55,17 @@ void draw() {
         gameMode=3;
       }
     }
-  }else if (gameMode==3) {
+  } else if (gameMode==3) {
     background(0, 0, 0, 100);
     fill(255);
     textAlign(CENTER);
     textSize(32);
-    text("PAUSE\nMove the mouse to control the ship.\nClick the mouse to shoot\nUse left and right arrow keys to rotate the ship.\nPress the ALT key to resume the game.", width/2, 60);
-    if (keyPressed && keyCode == ALT) {
+    text("PAUSE\nMove the mouse to control the ship.\nClick the mouse to shoot\nUse left and right arrow keys to rotate the ship.\nPress the SHIFT key to resume the game.", width/2, 60);
+    if (keyPressed && keyCode == SHIFT) {
       gameMode=2;
     }
   }
+  println(gameMode);
   s.display();
   s.move();
 }

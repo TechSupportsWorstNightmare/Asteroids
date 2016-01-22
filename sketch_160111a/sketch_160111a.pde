@@ -13,7 +13,7 @@ void setup(){
 ast= loadImage("asteroids.jpg");  //loads the Asteroids start screen
 
 
-s = new Ship();
+s = new Ship();             //displays ship
 while(i<count){
 a[i] = new Asteroid();
 i++;

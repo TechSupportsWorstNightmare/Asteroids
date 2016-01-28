@@ -26,9 +26,6 @@ void setup() {
   minim = new Minim(this);
   player = minim.loadFile("Little Einsteins Remix.mp3");
   player2 = minim.loadFile("Asteroids Game Boy Title Music.mp3");
-  s = new Ship();
-
-  a.add(new Asteroid(0, 0, 3));
 }
 
 void draw() { 
@@ -48,12 +45,13 @@ void draw() {
     textMode(CENTER);
     textAlign(CENTER);
     textSize(32);
-    text("Instructions\nUse your mouse to guide your ship around the screen.\nUse the left and right arrow keys to rotate the ship.\nClick the mouse to shoot at the asteroids.\nEvery time an asteroid is hit by your bullet it will split in two.\nAfter splitting twice the asteoid will be destroyed.\nYou will get point for every time you hit an asteroid.\nYou will get two lives\nGood Luck!\n Press the spacebar to play.", width/2, 80);
+    text("Instructions\nUse your mouse to guide your ship around the screen.\nClick the mouse to shoot at the asteroids.\nEvery time an asteroid is hit by your bullet it will split in two.\nAfter splitting twice the asteroid will be destroyed.\nYou will get point for every time you hit an asteroid.\nYou will get two lives\nGood Luck!\n Press the spacebar to play.", width/2, 80);
     if (keyPressed && key == ' ') {
       for (int i = 0; i < 5; i++) { 
         a.add(new Asteroid(0, 0, 3));
       }
       gameMode=2;
+      s = new Ship(width/2, height/2);
     }
   } else if (gameMode == 2) {
     background(0);
@@ -79,9 +77,9 @@ void draw() {
       if (s.contact(asteroid)) {
         println("ship hit in frame " + frameCount);
         lives--;
-        asteroid.loc.set(random(width),random(height));
+        asteroid.loc.set(random(width), random(height));
       }
-      if(lives==0){
+      if (lives<=0) {
         gameMode=4;
         player.pause();
       }

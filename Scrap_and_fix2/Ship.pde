@@ -2,7 +2,7 @@ class Ship {
   PVector loc, vel;
   float x1, x2, x3, y1, y2, y3;
   int i;
-  Ship() { 
+  Ship(float x,float y) { 
     loc = new PVector(mouseX, mouseY);
     vel = PVector.random2D();
 

@@ -5,7 +5,7 @@ Asteroid[] a= new Asteroid[count];
 Ship s;
 float x,y, tx,ty;
 
-PImage ast;
+PImage ast;  //sets up images
 
 void setup(){
   int i =0;

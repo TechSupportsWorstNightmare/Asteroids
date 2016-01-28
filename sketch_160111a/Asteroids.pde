@@ -16,7 +16,7 @@ void display(){           //sets parameters of the asteroid dimensions and coord
   
   
 }
-void brk(){
+void brk(){    //
   
   
 }

@@ -15,7 +15,7 @@ class Ship {         ;//sets ship class
   void move(){                //uses the arrow keys to move the ship
     if (key == CODED) {
     if (keyCode == UP) {
-      tloc.y= tloc.y-15;
+      tloc.y= tloc.y-15;    //moves at a rate of .15
     } else if (keyCode == DOWN) {
       tloc.y=tloc.y+15;
     }

@@ -5,7 +5,7 @@ Asteroid[] a= new Asteroid[count];
 Ship s;
 float x,y, tx,ty;
 
-PImage ast;
+PImage ast;  //sets up images
 
 void setup(){
   int i =0;
@@ -13,7 +13,7 @@ void setup(){
 ast= loadImage("asteroids.jpg");  //loads the Asteroids start screen
 
 
-s = new Ship();
+s = new Ship();             //displays ship
 while(i<count){
 a[i] = new Asteroid();
 i++;
